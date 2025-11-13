@@ -126,7 +126,7 @@ function Projects() {
         </p>
 
         <a
-          href="https://github.com/ravenuriell/my-portfolio"
+          href="https://github.com/ravenuriell/PersonalWebsite"
           target="_blank"
           rel="noopener noreferrer"
           className="project-link"

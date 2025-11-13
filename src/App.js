@@ -5,11 +5,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
       <Navbar /> {/* Navbar stays on top for all pages */}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />       {/* Home page */}
         <Route path="/about" element={<About />} /> {/* About page */}
