@@ -1,0 +1,76 @@
+.drag-gallery {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* make the photo stay in the center */
+.drag-photo {
+  width: 500px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(255, 100, 255, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+
+.drag-photo:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px rgba(255, 150, 255, 0.8);
+}
+
+/* arrow button styling */
+.drag-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.drag-btn:hover {
+  background: rgba(255, 100, 255, 0.3);
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* Position each button individually */
+.drag-btn.prev {
+  left: 75px; /* move closer to image */
+}
+
+.drag-btn.next {
+  right: 75px; /* slightly away for symmetry */
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(1.02); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .drag-photo {
+    width: 300px;
+  }
+
+  .drag-btn.prev {
+    left: -5px;
+  }
+
+  .drag-btn.next {
+    right: -5px;
+  }
+}

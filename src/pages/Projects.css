@@ -1,0 +1,222 @@
+.projects-page {
+  position: relative;
+  width: 100%;
+  min-height: 200vh;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 4rem;
+}
+
+.projects-top-title {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  z-index: 20;
+  text-shadow: 0 0 5px black;
+}
+
+/*  GENERAL PROJECTS SECTION  */
+.projects-section {
+  width: 80%;
+  max-width: 1000px;
+  margin: 6rem auto 3rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #00f2fe;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #00f2fe;
+}
+
+
+/* FOOTER BUTTON  */
+.projects-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.projects-btn {
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projects-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+}
+
+/*  GITHUB  */
+.github-repos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.repo-card {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 15px;
+  width: 250px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.repo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.repo-card h4 {
+  margin-bottom: 0.5rem;
+  color: #00f2fe;
+  font-size: 1.1rem;
+}
+
+.repo-card p {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+/*  FAR  */
+.far-section {
+  margin: 6rem auto;
+  width: 85%;
+  max-width: 1000px;
+  padding: 3rem 2rem;
+  border-radius: 25px;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1), rgba(0, 0, 0, 0.6));
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.project-title {
+  font-size: 2.2rem;
+  color: #00f2fe;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  margin-bottom: 1rem;
+}
+
+.project-description,
+.project-details {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.project-video {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.project-video iframe {
+  border-radius: 15px;
+  border: 2px solid rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  width: 100%;
+  max-width: 720px;
+  height: 405px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.project-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* HOTTIE TOWER  */
+.hottie-section {
+  margin: 6rem auto;
+  width: 85%;
+  max-width: 1000px;
+  padding: 3rem 2rem;
+  border-radius: 25px;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1), rgba(0, 0, 0, 0.6));
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.hottie-section .project-title {
+  color: #00f2fe;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.hottie-section .project-link {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.hottie-section .project-link:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/*  PORTFOLIO WEBSITE  */
+.portfolio-section {
+  margin: 6rem auto;
+  width: 85%;
+  max-width: 1000px;
+  padding: 3rem 2rem;
+  border-radius: 25px;
+  background: radial-gradient(circle at center, rgba(79, 172, 254, 0.1), rgba(0, 0, 0, 0.6));
+  box-shadow: 0 0 25px rgba(79, 172, 254, 0.15);
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.portfolio-section .project-title {
+  color: #00f2fe;
+  text-shadow: 0 0 10px rgba(79, 172, 254, 0.7);
+}
+
+.portfolio-section .project-link {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.portfolio-section .project-link:hover {
+  box-shadow: 0 0 20px rgba(79, 172, 254, 0.6);
+}
+

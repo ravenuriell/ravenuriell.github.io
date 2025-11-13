@@ -1,0 +1,89 @@
+/* ===== Global Reset ===== */
+html, body, #root {
+  height: 100%;        /* make root fill viewport */
+  margin: 0;           /* remove default margin */
+  padding: 0;          /* remove default padding */
+  overflow-x: hidden;  /* prevent horizontal scroll */
+}
+
+/* ===== Global Styles ===== */
+html, body, #root {
+  height: 100%;       /* make sure root & body take full height */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+/* Optional: default background for all pages (can be overridden per page/section) */
+body {
+  background-color: #2B2B2B;   /* dark fallback color */
+  font-family: 'Roboto', sans-serif;
+
+
+}
+
+/* ===== Home Section ===== */
+#home {
+  min-height: 100vh;           /* full viewport height */
+  width: 100%;
+  background-color: #2B2B2B;   /* solid dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+/* ===== About Section ===== */
+#about {
+  position: relative;
+  min-height: 100vh;           /* full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  inset: 0;                     /* top:0; left:0; right:0; bottom:0 */
+  background: url("../assets/background.jpg") no-repeat center/cover;
+  filter: blur(8px);            /* blur applied only to background */
+  transform: scale(1.1);        /* prevents sharp edges after blur */
+  z-index: -1;                   /* keep behind text */
+}
+
+/* ===== Projects Section ===== */
+#projects {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/background.jpg") no-repeat center/cover;
+  color: white;
+  padding: 4rem;
+}
+
+/* ===== Contact Section ===== */
+#contact {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  color: white;
+  padding: 4rem;
+}
+
+/* ===== Section Content Box ===== */
+.section-content {
+  position: relative;
+  z-index: 1;                   /* ensure text stays above blurred backgrounds */
+  padding: 2rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay for readability */
+}

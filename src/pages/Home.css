@@ -1,0 +1,102 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 1s ease; /* smooth fade */
+  opacity: 1;                  /* default fully visible */
+}
+.home-content-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 10;
+  gap: 2rem;
+}
+
+.home-image {
+  max-width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  animation: float 6s ease-in-out infinite;
+}
+
+.home-image img {
+  width: 100%;
+  display: block;
+}
+
+.home-text {
+  max-width: 50%;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  text-align: center;        /* center the header, paragraphs, and button */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;       /* ensures button is aligned with text */
+}
+
+/* Header styling */
+.home-text h1 {
+  font-size: 3rem;       /* make header larger */
+  font-weight: 600;      /* bold */
+  margin-bottom: 1rem;   /* space below header */
+  text-align: center;
+}
+
+/* Paragraph styling */
+.home-text p {
+  font-size: 1.25rem;    /* slightly larger paragraph text */
+  font-weight: 400;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.lets-go-button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lets-go-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+}
+/* black fade overlay */
+.home::after {
+  content: "";
+  position: fixed;
+  inset: 0;               /* top:0; left:0; right:0; bottom:0 */
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease; /* fade duration */
+  z-index: 999;            /* above everything */
+}
+.home.fade-out::after {
+  opacity: 1;             /* triggers black fade */
+}
+/* Float animation for the photo */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
